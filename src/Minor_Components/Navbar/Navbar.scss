@@ -1,0 +1,91 @@
+@media screen and (max-width: 900px){
+    .navigationBar_ul--desktop{
+        display: none;
+    }
+    .navigationBar{
+        background-color: white;
+        height: fit-content;
+        display: flex;
+        justify-content: flex-end;
+        position:sticky;
+        top: 0;
+        transition: .1s ease-in-out;
+        overflow: hidden;
+        z-index: 5; 
+      }
+
+.app_navbar-menu {
+        width: fit-content;
+        height: fit-content;
+
+        .app_navbar-menu_icon{
+            color: black; 
+            height: clamp(2rem, 4rem, 6rem);
+            margin-right: 1rem;
+
+        }
+    
+    
+        div {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 50;
+    
+            padding: 1rem;
+    
+            width: 80%;
+            height: 100vh;
+    
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+    
+            box-shadow: 0 0 50px rgba(7, 7, 7, 0.5);
+    
+            background: white;
+
+            overflow: hidden;
+            
+            -webkit-backface-visibility: hidden;
+    
+    
+            svg {
+                width: 15%;
+                height: auto;
+                color: rgba(252,98,77);
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+    
+                display: flex;
+                gap: 10%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+    
+                li {
+                    height: fit-content;
+                    a{
+                        text-decoration: none;
+                        font-size: 2rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        font-family: 'Montserrat', sans-serif;
+                        color: black;
+    
+                        transition: all .3s ease-in-out;
+    
+                    }
+                }
+            }
+    
+        }
+    }
+}

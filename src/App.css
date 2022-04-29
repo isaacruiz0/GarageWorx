@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+  }
+  *{
+    font-family: 'Montserrat', sans-serif;
+    
+  }
