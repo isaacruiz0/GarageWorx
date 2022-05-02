@@ -1,7 +1,6 @@
 import React from 'react'
 // S C S S
 import './Home.scss'
-import Contact from '../../Minor_Components/Contact/Contact.jsx'
 
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
           <h1>Why Epoxy?</h1>
           <img className='comparisonTable_image' src="https://i.ibb.co/YTs0kKv/Screen-Shot-2022-04-27-at-2-56-49-PM.png" alt="comparison-chart"/>
         </section>
-        <Contact/>
       </main>
     </div>
   )
