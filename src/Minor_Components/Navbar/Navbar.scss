@@ -19,7 +19,7 @@
         height: fit-content;
 
         .app_navbar-menu_icon{
-            color: black; 
+            color: rgba(0, 0, 0, 0.799);
             height: clamp(2rem, 4rem, 6rem);
             margin-right: 1rem;
 
@@ -72,6 +72,7 @@
     
                 li {
                     height: fit-content;
+                    cursor: pointer;
                     a{
                         text-decoration: none;
                         font-size: 2rem;

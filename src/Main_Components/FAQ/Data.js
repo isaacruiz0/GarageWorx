@@ -8,15 +8,15 @@ export const Data = [
         answer: "It takes about 2 days but under certain circumstances we can get it done in 1 day."    
     },
     {
-        question: "What payment methods do you accept?",
-        answer: "We take cash,check, zelle and credit cards; there is a 3% fee on all card transactions. "    
+        question: "What payment methods do we accept?",
+        answer: "We take cash, check, zelle and credit cards; there is a 3% fee on all card transactions. "    
     },
     {
-        question: "How long will the chemicl fumes remain and are they toxic?",
+        question: "How long will the chemical fumes remain and are they toxic?",
         answer: "Yes, the polyespartic top coat is suggested to be harmful if inhaled for an extended period of time but all fumes will begin to fade away after 24 hours. "    
     },
     {
-        question: "How long after installation, could I freely walk around my garage?",
+        question: "How long after installation could I freely walk around my garage?",
         answer: "We recommend to give it about 24 hours after installation before walking on top of it."    
     },
     {

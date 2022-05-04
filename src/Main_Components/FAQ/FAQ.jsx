@@ -1,5 +1,6 @@
 import React  from 'react'
 import { useState } from 'react'
+import { useEffect } from 'react'
 // D A T A
 import { Data } from './Data'
 // S C S S
@@ -11,7 +12,9 @@ import {FiPlus, FiMinus} from 'react-icons/fi'
 
 
 const FAQ = () => {
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     const [click, setClick] = useState(false)
 
     const toggle = index => {
@@ -41,6 +44,10 @@ const FAQ = () => {
                 })}
             </div>
         </section>
+        <div className='FAQ-contactPitch'>
+          <h1>Have more questions?</h1>
+          <h4>Send us a message...</h4>
+        </div>
     </IconContext.Provider>
   )
 }

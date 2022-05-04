@@ -26,9 +26,10 @@ const Contact = () => {
   }
 
   return (
-    <div id='Contact' className='container' style={{marginTop:"50px",marginBottom:"50px", width:"95%"}}>
-      <h1>Contact Us</h1>
+    <div id='Contact' className='container'>
       <form onSubmit={sendEmail} ref={form}>
+        <p>555-555-555</p>
+        <p>email@yahoo.com</p>
         <label>Name</label>
         <input type="text" name='user_name' className='form-control'/>
 
@@ -37,7 +38,7 @@ const Contact = () => {
 
         <label>Message</label>
         <textarea name='message' rows='5' className='form-control' />
-        <input type='submit' value='Send' className='form-control btn'/>
+        <input type='submit' value='Send' className='form-control btn'id='routeContact'/>
 
       </form>
       
