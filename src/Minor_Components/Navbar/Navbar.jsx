@@ -39,7 +39,7 @@ function NavBar() {
                 <motion.div
                 initial={{x:'400'}}
                 animate={{x:0}}
-                transition={{ duration: .85, ease: 'easeOut' }}
+                transition={{ duration: .5, ease: 'easeOut' }}
               >
                   <HiX onClick={() => setToggle(false)} />
                 <ul onClick={()=> setToggle(false)} >
@@ -47,7 +47,7 @@ function NavBar() {
                     <li><a className='link' href='#routeContact'>Contact</a></li>
                     <li><a className='link' onClick={() => {navigate("/Quote")}}>Quote</a></li>
                     <li><a className='link' onClick={() => {navigate("/FAQ")}}>FAQ</a></li>
-                    <li><a className='link'>Coatings</a></li>
+                    <li><a className='link' onClick={() => {navigate("/Coatings")}}>Coatings</a></li>
                 </ul>
                 </motion.div>
               )

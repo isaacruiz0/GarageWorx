@@ -18,8 +18,11 @@ const Quote = () => {
   const [conditionPrice, setConditionPrice] = useState(0)
   // Displayed Price
   const [displayPrice, setDisplayPrice] = useState(0)
+// Class of Price
+const [activePrice, setActivePrice] = useState('')
   // Displayed Quote
   const [displayQuote, setDisplayQuote] = useState("Estimated Sum: ")
+
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -41,13 +44,18 @@ const Quote = () => {
     const priceEstimate = priceSqFeet + conditionPrice
     if(sqFoot < 10){
       setDisplayQuote('You might be missing a few zeros...')
-      setDisplayPrice('')
+      setActivePrice(false)
     }
     else if(priceEstimate < 1500){
+      setActivePrice(true)
+      setDisplayQuote("Estimated Sum: ")
       setDisplayPrice(1500)
+      
     }
     else{
+      setActivePrice(true)
       setDisplayPrice(priceEstimate)
+      setDisplayQuote("Estimated Sum: ")
     }
     setEstimateActive(true);
   }
@@ -57,7 +65,7 @@ const Quote = () => {
       <form onSubmit={handleSubmit} >
         <label><h3>Online Quote</h3></label>
         <label>Square Footage</label>
-        <input type="number" name='sqfeet' className='form-control' value={sqFoot} onChange={handleSqFoot}/>
+        <input type="number" name='sqfeet' className='form-control' pattern="[0-9]*" inputmode="numeric" value={sqFoot} onChange={handleSqFoot}/>
 
         <label>Concrete Condition</label>
         {/* <input type="email" name='condition' className='form-control'/> */}
@@ -75,7 +83,7 @@ const Quote = () => {
         </div>
 
         <input type='submit' value='Calculate Estimate' className='form-control btn'/>
-        <h3 className={isEstimateActive ? 'estimatedSum activeEstimate': 'estimatedSum'}><span>{displayQuote}</span> <span className='price'>{displayPrice.toLocaleString('en')}</span></h3>
+        <h3 className={isEstimateActive ? 'estimatedSum activeEstimate': 'estimatedSum'}><span>{displayQuote}</span> <span className={activePrice ? 'price' : 'price activePrice'}>{displayPrice.toLocaleString('en')}</span></h3>
       </form>
       </div>
       <h2>Follow up on your quote!</h2>

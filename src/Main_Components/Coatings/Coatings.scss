@@ -1,0 +1,54 @@
+.imageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    figure{
+        position: relative;
+        margin: 0;
+        width: 70%;
+        border-width: 1.5px;
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            text-align: left;
+            color: white;
+            font-weight: bold;
+            letter-spacing: .25rem;
+            font-size: 2rem;
+            width: 100%;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.66);
+            @media screen and (max-width: 360px){
+                font-size: 1.5rem;
+                padding-left: 1rem;
+                padding-top: 2rem;
+                span{
+                    padding: .5rem;
+                }
+            }
+            span{
+                
+
+            }
+        }
+    }
+    h2{
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 2rem;
+        color: rgba(0, 0, 0, 0.799);
+    }
+    h4{
+        text-align: center;
+        color: rgba(0, 0, 0, 0.799);
+        font-weight: bold;
+        letter-spacing: .05rem;
+        padding-top: 0;
+        padding: 1rem;
+    }
+}

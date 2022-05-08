@@ -1,6 +1,7 @@
 @media screen and (max-width: 900px){
     .containerQuote{
         padding: 1rem;
+        padding-bottom: 0;
         .quoteCalculator{
             background-color: rgba(0,0,0,.05);
             padding: 1.5rem;
@@ -56,6 +57,7 @@
                        opacity: 0;
                        visibility: hidden;
                        transition: opacity 0s linear;
+                       box-shadow: rgba(0, 0, 0, 0.25) 0px 2.5px 10px;
                        .dropdown-list_item{
                            padding: 1rem;
                            &:hover{
@@ -76,7 +78,7 @@
                     color: white;
                     font-weight: bold;
                     margin-top: 25px;
-                    background-color: rgb(250, 61, 36);
+                    background-color: rgba(250, 61, 36, 0.9);
                     padding: 1.5rem;
                     border-radius: .25rem;
                     visibility: hidden;
@@ -97,6 +99,9 @@
                     .price::before {
                         content:"$";
                     }
+                    .activePrice{
+                        display: none;
+                    }
                 }
                 
             }
@@ -116,8 +121,6 @@
             font-weight: bold;
             letter-spacing: .125rem;
             padding: 1rem;
-            padding-bottom: 2rem;
-            border-bottom: solid 1px rgba(252,98,77);
         }
     }
 }

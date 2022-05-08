@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Main_Components/Home/Home.jsx'
 import FAQ from './Main_Components/FAQ/FAQ.jsx'
 import Quote from './Main_Components/Quote/Quote.jsx'
+import Coatings from './Main_Components/Coatings/Coatings.jsx'
 
 // M I N O R   C O M P O N E N T S 
 import Navbar from './Minor_Components/Navbar/Navbar.jsx'
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element = {<Home />} />
           <Route path="/FAQ" element = {<FAQ />}/>
           <Route path='/Quote' element = {<Quote />}/>
+          <Route path='/Coatings' element = {<Coatings />}/>
         </Routes>
         <Contact />
       </Router>

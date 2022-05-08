@@ -28,8 +28,11 @@ const Contact = () => {
   return (
     <div id='Contact' className='container'>
       <form onSubmit={sendEmail} ref={form}>
-        <p>555-555-555</p>
-        <p>email@yahoo.com</p>
+        <div className='contactLinks'>
+          <a href="tel:555-666-7777">555-666-7777</a>
+          <a href="mailto:555-666-7777" className='bottomA'>email@yahoo.com</a>
+        </div>
+        
         <label>Name</label>
         <input type="text" name='user_name' className='form-control'/>
 

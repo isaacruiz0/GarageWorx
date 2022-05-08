@@ -1,9 +1,21 @@
 #Contact{
-    margin-top: 1rem;
     padding: 2rem;
-    padding-top: 0;
-    p{
+    border-top: solid 1px rgba(252,98,77);
+    .contactLinks{
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        .bottomA{
+            margin-top: .5rem;
+        }
+        a{
+            text-align: center;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.799);
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     label{
         margin-top: 10px;
