@@ -13,7 +13,7 @@ function NavBar() {
   let navigate = useNavigate();
 
   const changeBackground = () =>{
-    if(window.scrollY >= 66){
+    if(window.scrollY >= 1){
       setNavbar(true)
     }
     else{
@@ -26,13 +26,14 @@ function NavBar() {
   return (
     <nav className={navbar ? 'navigationBar active' : 'navigationBar'}>
         <ul className='navigationBar_ul--desktop'>
-            <li><a className='link'>Home</a></li>
-            <li><a className='link' >Quote</a></li>
-            <li><a className='link'>FAQ</a></li>
-            <li><a className='link'>Coatings</a></li>
+          <li><a className='link' onClick={() => {navigate("/")}}k>Home</a></li>
+          <li><a className='link' href='#routeContact'>Contact</a></li>
+          <li><a className='link' onClick={() => {navigate("/Quote")}}>Quote</a></li>
+          <li><a className='link' onClick={() => {navigate("/FAQ")}}>FAQ</a></li>
+          <li><a className='link' onClick={() => {navigate("/Coatings")}}>Coatings</a></li>
         </ul>
         <div className='app_navbar-menu'>
-              <BiMenuAltRight  className='app_navbar-menu_icon' onClick={() => setToggle(true)}/>
+              <BiMenuAltRight  className='app_navbar-menu_icon active' onClick={() => setToggle(true)}/>
               {/* FRAMER MOTION -> if toggle is true then it will render the mobile version of the menu */}
               {toggle && (
                 // WHEN TOGGLE IS TRUE IT WILL CREATE A SPECIAL MOTION DIV THAT HAS COOL PROPERTIES

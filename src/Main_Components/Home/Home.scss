@@ -25,8 +25,10 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25) ), url('https://i.ibb.co/W5YkLd2/Screen-Shot-2022-04-27-at-1-49-06-AM.png');
-            background-position: cover;
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.15) ), url('https://i.ibb.co/W5YkLd2/Screen-Shot-2022-04-27-at-1-49-06-AM.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
 
             h1{
                 height: fit-content;
@@ -169,6 +171,56 @@
                 width: 80%;
                 text-align: center;
             }
+        }
+    }
+}
+@media screen and (min-width: 900px){
+    .Home_main-quotePitch{
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15) ), url('https://i.ibb.co/W5YkLd2/Screen-Shot-2022-04-27-at-1-49-06-AM.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        h1{
+            height: fit-content;
+            width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: clamp(.25rem, 4rem, 7rem);
+            color: white;
+            text-shadow: 0px 0px 15px black;
+
+        }
+        .quoteButton{
+            height: fit-content;
+            width: fit-content;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+            display: flex;
+            justify-content: center;
+            
+            background-color: rgba(252,98,77);
+
+            border-radius: 50%;
+            border: none;
+            h1{
+                color: white;
+                font-size: clamp(.75rem, 1.5rem, 2rem);
+                text-shadow: 0 0;
+                width: 60%;
+            }   
+
         }
     }
 }

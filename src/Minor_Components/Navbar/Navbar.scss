@@ -9,9 +9,11 @@
         justify-content: flex-end;
         position:sticky;
         top: 0;
-        transition: .1s ease-in-out;
         overflow: hidden;
         z-index: 5; 
+      }
+      .navigationBar.active { 
+          background-color: #F5F5F5;
       }
 
 .app_navbar-menu {
@@ -91,8 +93,64 @@
     }
 
 }
+// *************
+// D E S K T O P
+// *************
+
 @media screen and (min-width: 900px){
        .app_navbar-menu{
            display: none;
        } 
+       .navigationBar.navigationBar.active{
+           background-color: #F5F5F5;
+       }
+       .navigationBar{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            position:sticky;
+            top: 0;
+            overflow: hidden;
+            z-index: 5; 
+            background-color: white;
+        .navigationBar_ul--desktop{
+            width: fit-content;
+            display: flex;
+            margin-top: 0;
+            margin-bottom:0;
+            margin-right: 48px;
+            animation: fadeInRight 1.25s ease-in-out;
+            li{
+                margin-left: 3rem;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                a::after{
+                    content: '';
+                    height: 2px;
+                    width: 0%;
+                    background-color: rgba(0, 0, 0, 0.799);
+                    display: block;
+                    transition: .2s ease-in;
+                }
+                a:hover::after{
+                    content:'';
+                    height: 2px;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.799);
+                    display: block;
+                  }
+                a{
+                    color: rgba(0, 0, 0, 0.799);
+                    text-decoration: none;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                  }
+              }
+        }     
+       }
+       
 }
