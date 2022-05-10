@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 // I M A G E   A R R A Y
 import coatings from './coatingsArray'
 // S C S S   
@@ -10,6 +11,9 @@ console.log(coatings)
 const imageArray =coatings.map(eachImage => <figure><img className='coatingImage' src={eachImage[0]} /> <figcaption><span>{eachImage[1]}</span></figcaption></figure> )
 
 const Coatings = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='imageContainer'>
       {imageArray}
