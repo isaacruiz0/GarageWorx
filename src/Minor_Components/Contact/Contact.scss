@@ -1,6 +1,5 @@
 #Contact{
     padding: 2rem;
-    border-top: solid 1px rgba(252,98,77);
     .contactLinks{
         text-align: center;
         display: flex;
@@ -25,5 +24,24 @@
         color: white;
         font-weight: bold;
         margin-top: 25px;
+    }
+}
+@media screen and (min-width: 900px){
+    #Contact{
+        display: flex;
+        .backgroundDiv{
+            display: flex;
+            background-color: #F5F5F5;;
+            padding: 3rem;
+            .contactLinks{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                a{
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 }

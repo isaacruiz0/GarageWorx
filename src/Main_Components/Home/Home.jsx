@@ -10,12 +10,23 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // const [isVisible, setVisible] = React.useState(true);
+  // const domRef = React.useRef();
+  // React.useEffect(() => {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => setVisible(entry.isIntersecting));
+  //   });
+  //   observer.observe(domRef.current);
+  //   return () => observer.unobserve(domRef.current);
+  // }, []);
+  
   return (
     <div id='Home'>
       <main className='Home_main'>
         <section className='Home_main-quotePitch'>
           <h1>Get your FREE online quote in seconds!</h1>
-          <button className='quoteButton' onClick={() => {navigate("/Quote")}}><h1>Click for <br className='break'/>Free Quote</h1></button>
+          <button className='quoteButton' onClick={() => {navigate("/Quote")}}>FREE QUOTE</button>
         </section>
         <section className='Home_main-epoxyPitch'>
           <div className="tableSection">

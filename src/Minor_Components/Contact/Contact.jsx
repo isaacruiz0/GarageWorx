@@ -27,11 +27,12 @@ const Contact = () => {
 
   return (
     <div id='Contact' className='container'>
+      <div className="backgroundDiv">
+      <div className='contactLinks'>
+        <a href="tel:555-666-7777">555-666-7777</a>
+        <a href="mailto:555-666-7777" className='bottomA'>email@yahoo.com</a>
+      </div>
       <form onSubmit={sendEmail} ref={form}>
-        <div className='contactLinks'>
-          <a href="tel:555-666-7777">555-666-7777</a>
-          <a href="mailto:555-666-7777" className='bottomA'>email@yahoo.com</a>
-        </div>
         
         <label>Name</label>
         <input type="text" name='user_name' className='form-control'/>
@@ -44,7 +45,7 @@ const Contact = () => {
         <input type='submit' value='Send' className='form-control btn'id='routeContact'/>
 
       </form>
-      
+      </div> 
     </div>
   )
 }
