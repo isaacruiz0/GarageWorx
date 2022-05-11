@@ -29,8 +29,8 @@ const Contact = () => {
     <div id='Contact' className='container'>
       <div className="backgroundDiv">
       <div className='contactLinks'>
-        <a href="tel:555-666-7777">555-666-7777</a>
-        <a href="mailto:555-666-7777" className='bottomA'>email@yahoo.com</a>
+        <a href="tel:555-666-7777"><i class="fa fa-phone" aria-hidden="true"></i><span>555-666-7777</span></a>
+        <a href="mailto:555-666-7777" className='bottomA'><i class="fa fa-envelope" aria-hidden="true"></i><span>email@yahoo.com</span></a>
       </div>
       <form onSubmit={sendEmail} ref={form}>
         

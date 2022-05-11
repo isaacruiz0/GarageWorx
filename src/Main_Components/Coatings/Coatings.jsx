@@ -15,8 +15,10 @@ const Coatings = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div className='imageContainer'>
-      {imageArray}
+    <div className='coatingsDiv'>
+      <div className="imageContainer">
+        {imageArray}
+      </div>
       <div className='contactPitch'>      
         <h2>Which one fits you?</h2>
         <h4>Let us know below!</h4>

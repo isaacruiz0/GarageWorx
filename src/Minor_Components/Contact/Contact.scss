@@ -1,23 +1,16 @@
 #Contact{
     padding: 2rem;
+    padding-top: 0;
     .contactLinks{
-        text-align: center;
         display: flex;
         flex-direction: column;
+        align-items: center;
         .bottomA{
             margin-top: .5rem;
         }
-        a{
-            text-align: center;
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.799);
-            cursor: pointer;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
     label{
-        margin-top: 10px;
+        margin: 0;
     }
     input[type=Submit]{
         background-color: rgba(252,98,77);
@@ -25,10 +18,42 @@
         font-weight: bold;
         margin-top: 25px;
     }
+    .form-control{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 900px){
+    .contactLinks{
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        a{
+            font-size: 1.25rem;
+            display: flex;
+            width: fit-content;
+            gap: 2rem;
+            margin: 0;
+            margin-right: auto;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.799);
+            span{
+                vertical-align: middle;
+            }
+            .fa{
+                border-radius: 50%;
+                width: fit-content;
+                height: fit-content;
+                padding: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    }
 }
 @media screen and (min-width: 900px){
     #Contact{
         display: flex;
+        width: 90%;
         .backgroundDiv{
             display: flex;
             background-color: #F5F5F5;;
@@ -37,9 +62,30 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: flex-start;
                 gap: 2rem;
                 a{
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
+                    display: flex;
+                    width: fit-content;
+                    gap: 2rem;
+                    margin: 0;
+                    margin-right: auto;
+                    text-decoration: none;
+                    color: rgba(0, 0, 0, 0.799);
+                    span{
+                        vertical-align: middle;
+                        padding: 1rem;
+                    }
+                    .fa{
+                        background-color: white;
+                        border-radius: 50%;
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 1rem;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
                 }
             }
         }

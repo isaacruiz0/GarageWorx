@@ -16,7 +16,7 @@ export const Data = [
         answer: "Yes, the polyespartic top coat is suggested to be harmful if inhaled for an extended period of time but all fumes will begin to fade away after 24 hours. "    
     },
     {
-        question: "How long after installation could I freely walk around my garage?",
+        question: "How long after installation until I could freely walk around my garage?",
         answer: "We recommend to give it about 24 hours after installation before walking on top of it."    
     },
     {
