@@ -1,43 +1,43 @@
-import cottonSeed from './imageCoatings/cottonSeed.jpg'
-import biscuitTan from './imageCoatings/biscuitTan.jpg'
-import pearlBush from './imageCoatings/pearlBush.jpg'
-import dune from './imageCoatings/dune.jpg'
-import paleTaupe from './imageCoatings/paleTaupe.jpg'
-import rodeoDust from './imageCoatings/rodeoDust.jpg'
-import frenchBeige from './imageCoatings/frenchBeige.jpg'
-import martini from './imageCoatings/martini.jpg'
-import cafeNoir from './imageCoatings/cafeNoir.jpg'
-import ironstone from './imageCoatings/ironstone.jpg'
-import coldTurkey from './imageCoatings/coldTurkey.jpg'
-import linkWater from './imageCoatings/linkWater.jpg'
-import gainsboro from './imageCoatings/gainsboro.jpg'
-import mercury from './imageCoatings/mercury.jpg'
-import silverSand from './imageCoatings/silverSand.jpg'
-import greyChateau from './imageCoatings/greyChateau.jpg'
-import onyx from './imageCoatings/onyx.jpg'
-import boulder from './imageCoatings/boulder.jpg'
-import sapphire from './imageCoatings/sapphire.jpg'
+import blueFog from './imageCoatings/blueFog.jpg'
+import brickHouse from './imageCoatings/brickHouse.jpg'
+import capeCod from './imageCoatings/capeCod.jpg'
+import champagne from './imageCoatings/champagne.jpg'
+import charcoal from './imageCoatings/charcoal.jpg'
+import chestnut from './imageCoatings/chestnut.jpg'
+import classicBeige from './imageCoatings/classicBeige.jpg'
+import desertClay from './imageCoatings/desertClay.jpg'
+import eucalyptus from './imageCoatings/eucalyptus.jpg'
+import ironwood from './imageCoatings/ironwood.jpg'
+import mocha from './imageCoatings/mocha.jpg'
+import platinum from './imageCoatings/platinum.jpg'
+import rockyMountain from './imageCoatings/rockyMountain.jpg'
+import rusticBrown from './imageCoatings/rusticBrown.jpg'
+import stoneGrey from './imageCoatings/stoneGrey.jpg'
+import storm from './imageCoatings/storm.jpg'
+import swissCoffee from './imageCoatings/swissCoffee.jpg'
+import titanium from './imageCoatings/titanium.jpg'
+import tungsten from './imageCoatings/tungsten.jpg'
 
 const coatings = [
-    [cottonSeed, 'Cotton Seed'],
-    [biscuitTan, 'Biscuit Tan'],
-    [pearlBush, 'Pearl Bush'],
-    [dune, 'Dune'],
-    [paleTaupe, 'Pale Taupe'],
-    [rodeoDust, 'Rodeo Dust'],
-    [frenchBeige, 'French Beige'],
-    [martini, 'Martini'],
-    [cafeNoir, 'Cafe Noir'],
-    [ironstone, 'Ironstone'],
-    [coldTurkey, 'Cold Turkey'],
-    [linkWater, 'Link Water'],
-    [gainsboro, 'Gainsboro'],
-    [mercury, 'Mercury'],
-    [silverSand, 'Silver Sand'],
-    [greyChateau, 'Grey Chateau'],
-    [onyx, 'Onyx'],
-    [boulder, 'Boulder'],
-    [sapphire, 'Sapphire']
+    [blueFog, 'Blue Fog'],
+    [brickHouse, 'Brick House'],
+    [capeCod, 'Cape Cod'],
+    [champagne, 'Champagne'],
+    [charcoal, 'Charcoal'],
+    [chestnut, 'Chestnut'],
+    [classicBeige, 'Classic Beige'],
+    [desertClay, 'Desert Clay'],
+    [eucalyptus, 'Eucalyptus'],
+    [ironwood, 'Ironwood'],
+    [mocha, 'Mocha'],
+    [platinum, 'Platinum'],
+    [rockyMountain, 'Rocky Mountain'],
+    [rusticBrown, 'Rustic Brown'],
+    [stoneGrey, 'Stone Grey'],
+    [storm, 'Storm'],
+    [swissCoffee, 'Swiss Coffee'],
+    [titanium, 'Titanium'],
+    [tungsten, 'Tungsten']
 ]
 
 export default coatings

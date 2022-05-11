@@ -1,6 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router';
+
+// G R A P H   I M A G E
+import graphComparison from './graphComparison.png'
 // S C S S
 import './Home.scss'
 
@@ -31,7 +34,7 @@ const Home = () => {
         <section className='Home_main-epoxyPitch'>
           <div className="tableSection">
             <div className='epoxyH1Div'><h1>Why <br className='break'/>Epoxy?</h1></div>
-            <img className='comparisonTableImage' src="https://i.ibb.co/YTs0kKv/Screen-Shot-2022-04-27-at-2-56-49-PM.png" alt="comparison-chart"/>
+            <img className='comparisonTableImage' src={graphComparison} alt="comparison-chart"/>
           </div>
             <h1 className='differenceFunnel'>Let's check out the difference...</h1>
           <div className='compareImages'>
