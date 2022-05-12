@@ -28,7 +28,7 @@ const Home = () => {
     <div id='Home'>
       <main className='Home_main'>
         <section className='Home_main-quotePitch'>
-          <h1>Get your FREE online quote in seconds!</h1>
+          <h1>Test</h1>
           <button className='quoteButton' onClick={() => {navigate("/Quote")}}>FREE QUOTE</button>
         </section>
         <section className='Home_main-epoxyPitch'>
