@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router';
 
+import homeImage from './homeImage.png'
 // G R A P H   I M A G E
 import graphComparison from './graphComparison.png'
 // S C S S
@@ -28,7 +29,7 @@ const Home = () => {
     <div id='Home'>
       <main className='Home_main'>
         <section className='Home_main-quotePitch'>
-          <h1>Test</h1>
+          <h1>Get your FREE online quote in seconds!</h1>
           <button className='quoteButton' onClick={() => {navigate("/Quote")}}>FREE QUOTE</button>
         </section>
         <section className='Home_main-epoxyPitch'>
