@@ -10,23 +10,23 @@ import './Coatings.scss'
 
 const Coatings = () => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  
   const [clickedImage, setClickedImage] = useState('')
   const [display, setDisplay] = useState(false)
 
-  // const handleClickedImage = () => {
-  //   setClickedImage(eachImage[0])
-  //   setDisplay(true)
-  // }
+      
   const style = { color: "white", fontSize: "1.5em" }
-
+  
   const imageArray =coatings.map(eachImage => <figure><img className='coatingImage' src={eachImage[0]} onClick={() => {
     setClickedImage(eachImage[0])
     setDisplay(true)
   }}/> <figcaption><span>{eachImage[1]}<BiExpandAlt style={style}/></span></figcaption></figure> )
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+
+  }, [])
+  
+
 
   return (
     <div className='coatingsDiv'>
