@@ -20,11 +20,17 @@
         width: fit-content;
         height: fit-content;
 
+        display: flex;
+        justify-content: flex-end;
         .app_navbar-menu_icon{
             color: rgba(0, 0, 0, 0.799);
             height: clamp(2rem, 4rem, 6rem);
-            margin-right: 1rem;
-
+            width: auto;
+            margin-left: auto;
+            svg{
+                width: fit-content;
+                margin-left: auto;
+            }
         }
     
     

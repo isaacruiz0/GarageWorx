@@ -63,7 +63,7 @@ const [activePrice, setActivePrice] = useState('')
     <div className='containerQuote'>
       <div className="quoteCalculator">
       <form onSubmit={handleSubmit} >
-        <label><h3>Online Quote</h3></label>
+        <label className='quoteLabel'><h3>Online Quote</h3><br/><p>Fill in the details for an estimate</p></label>
         <label>Square Footage</label>
         <input type="number" name='sqfeet' className='form-control' pattern="[0-9]*" inputmode="numeric" value={sqFoot} onChange={handleSqFoot}/>
 
@@ -86,8 +86,10 @@ const [activePrice, setActivePrice] = useState('')
         <h3 className={isEstimateActive ? 'estimatedSum activeEstimate': 'estimatedSum'}><span>{displayQuote}</span> <span className={activePrice ? 'price' : 'price activePrice'}>{displayPrice.toLocaleString('en')}</span></h3>
       </form>
       </div>
-      <h2>Follow up on your quote!</h2>
-      <h4>Contact us below</h4>
+      <div className = 'divText'>
+        <h2>Follow up on your quote!</h2>
+        <h4>Contact us below</h4>
+      </div>
     </div>
   )
 }

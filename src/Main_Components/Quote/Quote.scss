@@ -6,6 +6,14 @@
         .quoteCalculator{
             background-color: rgba(0,0,0,.05);
             padding: 1.5rem;
+            .quoteLabel{    
+                h3{
+                    font-size: 2.5rem;
+                }
+                p{
+                    font-weight: bold;
+                }
+            }
             form{
                 padding-bottom: 10px;
                 label{

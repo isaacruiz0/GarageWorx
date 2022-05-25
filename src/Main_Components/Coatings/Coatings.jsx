@@ -16,7 +16,7 @@ const Coatings = () => {
       
   const style = { color: "white", fontSize: "1.5em" }
   
-  const imageArray =coatings.map(eachImage => <figure><img className='coatingImage' src={eachImage[0]} onClick={() => {
+  const imageArray =coatings.map(eachImage => <figure><img className='coatingImage' src={eachImage[0]} alt={eachImage[1]} onClick={() => {
     setClickedImage(eachImage[0])
     setDisplay(true)
   }}/> <figcaption><span>{eachImage[1]}<BiExpandAlt style={style}/></span></figcaption></figure> )
@@ -35,7 +35,7 @@ const Coatings = () => {
       </div>
       <div className="popupImages" style={display ? {display:'block'} : {display:'none'}}>
         <HiX onClick={() => {setDisplay(false)}}/>
-        <img src={clickedImage}/>
+        <img src={clickedImage} alt="zoomed in coating"/>
       </div>
       <div className='contactPitch'>      
         <h2>Which one fits you?</h2>

@@ -29,7 +29,6 @@
             align-items: center;
             flex-direction: column;
             background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0) ), url('./homeImage.png');
-            background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size : cover;
@@ -95,8 +94,6 @@
                 filter: brightness(1.25);
                 -webkit-filter: brightness(1.25);
               }
-              
-        
         }
         .Home_main-epoxyPitch{
             display: flex;
