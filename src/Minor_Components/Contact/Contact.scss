@@ -17,6 +17,9 @@
         color: white;
         font-weight: bold;
         margin-top: 10px;
+        &:hover{
+            background-color: rgba(250, 61, 36, 0.9);
+        }
     }
     .form-control{
         margin-bottom: 10px;
@@ -73,6 +76,9 @@
                     margin-right: auto;
                     text-decoration: none;
                     color: rgba(0, 0, 0, 0.799);
+                    &:hover{
+                        color: rgba(252,98,77);;
+                    }
                     span{
                         vertical-align: middle;
                         padding: 1rem;
