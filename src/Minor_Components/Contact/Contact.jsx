@@ -30,7 +30,7 @@ const Contact = () => {
       <div className="backgroundDiv">
       <div className='contactLinks'>
         <a href="tel:555-666-7777"><i class="fa fa-phone" aria-hidden="true"></i><span>555-666-7777</span></a>
-        <a href="mailto:555-666-7777" className='bottomA'><i class="fa fa-envelope" aria-hidden="true"></i><span>email@yahoo.com</span></a>
+        <a href="mailto:555-666-7777" className='bottomA'><i class="fa fa-envelope" aria-hidden="true"></i><span>garagewx@gmail.com </span></a>
       </div>
       <form onSubmit={sendEmail} ref={form}>
         
@@ -42,7 +42,7 @@ const Contact = () => {
 
         <label>Message</label>
         <textarea name='message' rows='5' className='form-control' />
-        <input type='submit' value='Send' className='form-control btn'id='routeContact'/>
+        <input type='submit' value='Send' className='form-control btn'id='contact'/>
 
       </form>
       </div> 

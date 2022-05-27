@@ -27,7 +27,7 @@ function NavBar() {
     <nav className={navbar ? 'navigationBar active' : 'navigationBar'}>
         <ul className='navigationBar_ul--desktop'>
           <li><a className='link' onClick={() => {navigate("/")}}k>Home</a></li>
-          <li><a className='link' href='#routeContact'>Contact</a></li>
+          <li><a className='link' href='#contact'>Contact</a></li>
           <li><a className='link' onClick={() => {navigate("/Quote")}}>Quote</a></li>
           <li><a className='link' onClick={() => {navigate("/FAQ")}}>FAQ</a></li>
           <li><a className='link' onClick={() => {navigate("/Coatings")}}>Coatings</a></li>
