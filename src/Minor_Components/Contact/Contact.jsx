@@ -29,7 +29,7 @@ const Contact = () => {
     <div id='Contact' className='container'>
       <div className="backgroundDiv">
       <div className='contactLinks'>
-        <a href="tel:555-666-7777"><i class="fa fa-phone" aria-hidden="true"></i><span>555-666-7777</span></a>
+        <a href="tel:555-666-7777"><i class="fa fa-phone" aria-hidden="true"></i><span>909-927-7001</span></a>
         <a href="mailto:555-666-7777" className='bottomA'><i class="fa fa-envelope" aria-hidden="true"></i><span>garagewx@gmail.com </span></a>
       </div>
       <form onSubmit={sendEmail} ref={form}>
