@@ -5,7 +5,7 @@ export const Data = [
     },
     {
         question: "How long is the installation time?",
-        answer: "It takes about 2 days but under certain circumstances we can get it done in 1 day."    
+        answer: "It takes about two days but under certain circumstances we can get it done in one day."    
     },
     {
         question: "What payment methods do we accept?",
