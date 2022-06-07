@@ -5,28 +5,35 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import { motion } from "framer-motion"
 import './Navbar.scss'
 
+import { useRef } from 'react';
+
 import navbarLogo from './navbarLogo.png'
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
-  //navbar scroll changeBackground function
+  //navbar scroll disappear function
   const [toggle, setToggle] = useState(false);
+
+
+  let lastScrollY = window.scrollY
+
+  window.addEventListener("scroll", () => {
+   if (lastScrollY < window.scrollY) {
+     setNavbar(true)
+   }
+   else{
+     setNavbar(false)
+   }
+  //  Redeclaring the variable so that it can work again
+   lastScrollY = window.scrollY
+  })
+
 
   let navigate = useNavigate();
 
-  const changeBackground = () =>{
-    if(window.scrollY >= 1){
-      setNavbar(true)
-    }
-    else{
-      setNavbar(false)
-    }
-  };
-
-  window.addEventListener("scroll", changeBackground)
 
   return (
-    <nav className={navbar ? 'navigationBar active' : 'navigationBar'}>
+    <nav  className={navbar ? 'navigationBar active' : 'navigationBar'}>
         <img src={navbarLogo} alt="Garage Worx logo" className="navbarLogo" onClick={() => {navigate("/")}} />
         <ul className='navigationBar_ul--desktop'>
           <li><a className='link' onClick={() => {navigate("/")}}>Home</a></li>

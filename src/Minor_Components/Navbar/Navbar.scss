@@ -12,6 +12,9 @@
         top: 0;
         overflow: hidden;
         z-index: 5; 
+
+        transition: transform .8s;
+        filter: drop-shadow(0px 8px 3px rgba(0, 0, 0, 0.01));
         .navbarLogo{
             max-width:40%;
             user-select: none;
@@ -20,7 +23,8 @@
         }
       }
       .navigationBar.active { 
-        filter: drop-shadow(0px 7.5px 4px rgba(0, 0, 0, 0.15));
+        transform: translateY(-100%);
+        box-shadow: none;
       }
 
 .app_navbar-menu {
@@ -115,7 +119,8 @@
            display: none;
        } 
        .navigationBar.navigationBar.active{
-            filter: drop-shadow(0px 7.5px 4px rgba(0, 0, 0, 0.15));
+           transform: translateY(-100%);
+           box-shadow: none;
        }
        .navigationBar{
             padding-top: 1rem;
@@ -127,6 +132,10 @@
             overflow: hidden;
             z-index: 5; 
             background-color: white;
+            transition: transform .8s;
+            filter: drop-shadow(0px 8px 3px rgba(0, 0, 0, 0.01));
+
+
             .navbarLogo{
                 width:20%;
                 margin-left: 48px;
