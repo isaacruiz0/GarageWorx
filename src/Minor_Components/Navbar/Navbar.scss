@@ -13,7 +13,6 @@
         overflow: hidden;
         z-index: 5; 
 
-        transition: transform .8s;
         filter: drop-shadow(0px 8px 3px rgba(0, 0, 0, 0.01));
         .navbarLogo{
             max-width:40%;
@@ -22,10 +21,7 @@
             padding: 1rem;
         }
       }
-      .navigationBar.active { 
-        transform: translateY(-100%);
-        box-shadow: none;
-      }
+g
 
 .app_navbar-menu {
         width: fit-content;
