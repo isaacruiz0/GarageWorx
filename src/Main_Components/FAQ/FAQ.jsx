@@ -18,11 +18,12 @@ const FAQ = () => {
     const [click, setClick] = useState(false)
 
     const toggle = index => {
+        setClick(index)
         if(click === index) {
             // if clicked is already active then close it
             return setClick(null)
         }
-        setClick(index)
+        
     }
 
   return (
