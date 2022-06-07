@@ -5,6 +5,8 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import { motion } from "framer-motion"
 import './Navbar.scss'
 
+import navbarLogo from './navbarLogo.png'
+
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   //navbar scroll changeBackground function
@@ -25,8 +27,9 @@ function NavBar() {
 
   return (
     <nav className={navbar ? 'navigationBar active' : 'navigationBar'}>
+        <img src={navbarLogo} alt="Garage Worx logo" className="navbarLogo" onClick={() => {navigate("/")}} />
         <ul className='navigationBar_ul--desktop'>
-          <li><a className='link' onClick={() => {navigate("/")}}k>Home</a></li>
+          <li><a className='link' onClick={() => {navigate("/")}}>Home</a></li>
           <li><a className='link' href='#contact'>Contact</a></li>
           <li><a className='link' onClick={() => {navigate("/Quote")}}>Quote</a></li>
           <li><a className='link' onClick={() => {navigate("/FAQ")}}>FAQ</a></li>

@@ -6,14 +6,20 @@
         background-color: white;
         height: fit-content;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         position:sticky;
         top: 0;
         overflow: hidden;
         z-index: 5; 
+        .navbarLogo{
+            max-width:40%;
+            user-select: none;
+            cursor: pointer;
+            padding: 1rem;
+        }
       }
       .navigationBar.active { 
-          background-color: #F5F5F5;
+        filter: drop-shadow(0px 7.5px 4px rgba(0, 0, 0, 0.15));
       }
 
 .app_navbar-menu {
@@ -108,18 +114,24 @@
            display: none;
        } 
        .navigationBar.navigationBar.active{
-           background-color: #F5F5F5;
+            filter: drop-shadow(0px 7.5px 4px rgba(0, 0, 0, 0.15));
        }
        .navigationBar{
             padding-top: 1rem;
             padding-bottom: 1rem;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             position:sticky;
             top: 0;
             overflow: hidden;
             z-index: 5; 
             background-color: white;
+            .navbarLogo{
+                width:20%;
+                margin-left: 48px;
+                user-select: none;
+                cursor: pointer;
+            }
         .navigationBar_ul--desktop{
             width: fit-content;
             display: flex;
@@ -131,7 +143,7 @@
                 width: fit-content;
                 display: flex;
                 align-items: center;
-                font-size: 1.5rem;
+                font-size: 1.75rem;
                 a::after{
                     content: '';
                     height: 2px;
