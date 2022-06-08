@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRef } from 'react'
+import { useRef} from 'react'
 // S C S S
 import './Contact.scss'
 // E M A I L    N P M    P A C K A G E
@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
+
   const form = useRef();
 
   const sendEmail = (e) =>{
@@ -21,21 +22,20 @@ const Contact = () => {
     });
     
     e.target.reset();
-
-    
   }
+
 
   return (
     <div id='Contact' className='container'>
       <div className="backgroundDiv">
       <div className='contactLinks'>
         <a href="tel:555-666-7777"><i class="fa fa-phone" aria-hidden="true"></i><span>909-927-7001</span></a>
-        <a href="mailto:555-666-7777" className='bottomA'><i class="fa fa-envelope" aria-hidden="true"></i><span>garagewx@gmail.com </span></a>
+        <a href="mailto:garagewx@gmail.com" className='bottomA'><i class="fa fa-envelope" aria-hidden="true"></i><span>garagewx@gmail.com</span></a>
       </div>
       <form onSubmit={sendEmail} ref={form}>
         
         <label>Name</label>
-        <input type="text" name='user_name' className='form-control'/>
+        <input type="text" name='user_name' className=''/>
 
         <label>Email</label>
         <input type="email" name='user_email' className='form-control'/>
