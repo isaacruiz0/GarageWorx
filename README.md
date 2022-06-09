@@ -12,11 +12,13 @@ https://garage-worx.com/
 
 ## Author
 Isaac Ruiz
-Contact - isaac.ruiz.us@gmail.com
-Portfolio - https://isaac-ruiz.com/
+### Contact
+isaac.ruiz.us@gmail.com
+### Portfolio 
+https://isaac-ruiz.com/
 
-### Frameworks
+## Frameworks
 React | SCSS
 
-### Languages
+## Languages
 JavaScript | HTML | CSS
