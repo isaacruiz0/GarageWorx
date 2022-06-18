@@ -32,8 +32,11 @@
             flex-direction: column;
             background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0) ), url('./homeImage.png');
             background-position: center;
-            background-repeat: no-repeat;
-            background-size : cover;
+            background-attachment: fixed;       
+            webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;   
 
             @media screen and (max-width: 375px){
                 padding: 6rem .5rem 10rem;
