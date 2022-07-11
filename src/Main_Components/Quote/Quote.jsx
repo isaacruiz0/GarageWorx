@@ -40,16 +40,16 @@ const [activePrice, setActivePrice] = useState('')
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    const priceSqFeet = sqFoot * 4;
+    const priceSqFeet = sqFoot * 3.85;
     const priceEstimate = priceSqFeet + conditionPrice
     if(sqFoot < 10){
       setDisplayQuote('You might be missing a few zeros...')
       setActivePrice(false)
     }
-    else if(priceEstimate < 1500){
+    else if(priceEstimate < 1400){
       setActivePrice(true)
       setDisplayQuote("Estimated Sum: ")
-      setDisplayPrice(1500)
+      setDisplayPrice(1400)
       
     }
     else{

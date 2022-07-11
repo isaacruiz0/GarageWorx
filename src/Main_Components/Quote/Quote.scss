@@ -90,8 +90,10 @@
                     color: white;
                     font-weight: bold;
                     margin-top: 25px;
-                    background-color: rgba(250, 61, 36, 0.9);
+                    width: 100%;
                     padding: 1.5rem;
+                    background-color: rgba(0, 0, 0, 0.799);
+
                     border-radius: .25rem;
                     visibility: hidden;
                     position: absolute;
@@ -99,6 +101,8 @@
                     left: 0;
                     right: 0;
                     opacity: 0;
+
+                    transition: all .5s;
                 }
                 .activeEstimate{
                     position: relative;
@@ -106,6 +110,7 @@
                     opacity: 1;   
                     .price{
                         font-style: italic;
+                        
 
                     }
                     .price::before {
