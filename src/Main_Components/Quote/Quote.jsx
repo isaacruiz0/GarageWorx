@@ -14,8 +14,8 @@ const Quote = () => {
   const [isEstimateActive, setEstimateActive] = useState(false);
   // Span Condition Value
   const [spanValue, setSpanValue] = useState("Select Condition")
-  // Condition Price
-  const [conditionPrice, setConditionPrice] = useState(0)
+  // The condition price will impact the price per sqft
+  const [pricePerSqft, setPricePerSqft] = useState(0)
   // Displayed Price
   const [displayPrice, setDisplayPrice] = useState(0)
 // Class of Price
@@ -31,21 +31,21 @@ const [activePrice, setActivePrice] = useState('')
   const toggleClassDrop = () => {
     setDropdownActive(!isDropdownActive);
   };
-  const toggleClassEstimate = () => {
-    setEstimateActive(!isEstimateActive);
-  };
+
   
   const handleSqFoot = (e) =>{
     setSqFoot(e.target.value)
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    const priceSqFeet = sqFoot * 3.85;
-    const priceEstimate = priceSqFeet + conditionPrice
+    const priceSqFeet = sqFoot * pricePerSqft;
+    const priceEstimate = priceSqFeet
+    // If sqffoot input is less than 10 sqft then we will display this text
     if(sqFoot < 10){
       setDisplayQuote('You might be missing a few zeros...')
       setActivePrice(false)
     }
+    // This is the minimum amount the price can be
     else if(priceEstimate < 1400){
       setActivePrice(true)
       setDisplayQuote("Estimated Sum: ")
@@ -68,17 +68,17 @@ const [activePrice, setActivePrice] = useState('')
         <input type="number" name='sqfeet' className='form-control' pattern="[0-9]*" inputmode="numeric" value={sqFoot} onChange={handleSqFoot}/>
 
         <label>Concrete Condition</label>
-        {/* <input type="email" name='condition' className='form-control'/> */}
+        {/* This is the div for the condition menu selection */}
         <div className="dropdown" onClick={toggleClassDrop}>
           <div className="dropdown-select">
             <span className="select">{spanValue}</span>
             <IoIosArrowDropdown className='downIcon'/>
           </div>
           <div className={isDropdownActive ? 'dropdown-list active': 'dropdown-list'}>
-            <div className="dropdown-list_item" onClick={()=>{setSpanValue('New');setConditionPrice(0)}}>New</div>
-            <div className="dropdown-list_item" onClick={()=>{setSpanValue('Good');setConditionPrice(355)}}>Good</div>
-            <div className="dropdown-list_item" onClick={()=>{setSpanValue('Fair');setConditionPrice(550)}}>Fair</div>
-            <div className="dropdown-list_item" onClick={()=>{setSpanValue('Poor');setConditionPrice(750)}}>Poor</div>
+            <div className="dropdown-list_item" onClick={()=>{setSpanValue('New');setPricePerSqft(3.75)}}>New</div>
+            <div className="dropdown-list_item" onClick={()=>{setSpanValue('Good');setPricePerSqft(3.85)}}>Good</div>
+            <div className="dropdown-list_item" onClick={()=>{setSpanValue('Fair');setPricePerSqft(3.95)}}>Fair</div>
+            <div className="dropdown-list_item" onClick={()=>{setSpanValue('Poor');setPricePerSqft(4.05)}}>Poor</div>
           </div>
         </div>
 
