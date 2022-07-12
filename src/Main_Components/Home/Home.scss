@@ -130,9 +130,10 @@
                 background: none;
                 text-align: center;
                 display: .5rem;
+                padding: .5rem;
                 @media screen and (max-width: 370px){
-                    font-size: 2rem;
-                    padding: .75rem;
+                    font-size: 1.75rem;
+                    padding: 1rem;
                 }
             }
 

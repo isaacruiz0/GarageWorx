@@ -39,7 +39,7 @@ const Home = () => {
             <div className='epoxyH1Div'><h1>Why <br className='break'/>Epoxy?</h1></div>
             <img className='comparisonTableImage' src={graphComparison} alt="comparison-chart"/>
           </div>
-            <h1 className='differenceFunnel'>Let's check out the difference...</h1>
+            <h1 className='differenceFunnel'>Let's check out the difference</h1>
           <div className='compareImages'>
             <div className="figureContainer beforeFigure">
               <figure className='before'>
