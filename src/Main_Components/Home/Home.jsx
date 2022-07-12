@@ -23,7 +23,7 @@ const Home = () => {
           setVisible(entry.isIntersecting)
           if (entry.isIntersecting) {observer.unobserve(entry.target)}
         })
-      },{threshold: .1})
+      },{threshold: .05})
     observer.observe(fadeInRef.current)
   }, [])
   
