@@ -52,11 +52,13 @@ const [activePrice, setActivePrice] = useState('')
       setDisplayPrice(1400)
       
     }
+    // If the calculated price estimate is above 1400 then it will display that price 
     else{
       setActivePrice(true)
       setDisplayPrice(priceEstimate)
       setDisplayQuote("Estimated Sum: ")
     }
+    // This will make the estimate div appear
     setEstimateActive(true);
   }
   return (
@@ -72,9 +74,11 @@ const [activePrice, setActivePrice] = useState('')
         <div className="dropdown" onClick={toggleClassDrop}>
           <div className="dropdown-select">
             <span className="select">{spanValue}</span>
+            {/* Icon for the drop down menu */}
             <IoIosArrowDropdown className='downIcon'/>
           </div>
           <div className={isDropdownActive ? 'dropdown-list active': 'dropdown-list'}>
+            {/* These selections will set the price/sqft rate according to user's input condition */}
             <div className="dropdown-list_item" onClick={()=>{setSpanValue('New');setPricePerSqft(3.75)}}>New</div>
             <div className="dropdown-list_item" onClick={()=>{setSpanValue('Good');setPricePerSqft(3.85)}}>Good</div>
             <div className="dropdown-list_item" onClick={()=>{setSpanValue('Fair');setPricePerSqft(3.95)}}>Fair</div>
@@ -83,7 +87,10 @@ const [activePrice, setActivePrice] = useState('')
         </div>
 
         <input type='submit' value='Calculate Estimate' className='form-control btn'/>
-        <h3 className={isEstimateActive ? 'estimatedSum activeEstimate': 'estimatedSum'}><span>{displayQuote}</span> <span className={activePrice ? 'price' : 'price activePrice'}>{displayPrice.toLocaleString('en')}</span></h3>
+        {/* This price will be displayed and rounded to the nearest hundreths */}
+        <h3 className={isEstimateActive ? 'estimatedSum activeEstimate': 'estimatedSum'}><span>{displayQuote}</span> <span className={activePrice ? 'price' : 'price activePrice'}>{displayPrice.toFixed(2)}</span></h3>
+        
+
       </form>
       </div>
       <div className = 'divText'>
