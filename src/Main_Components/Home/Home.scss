@@ -70,14 +70,14 @@
                 cursor: pointer;
                 display: inline-block;
                 font-family: din-round,sans-serif;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 font-weight: 700;
                 letter-spacing: .8px;
                 line-height: 20px;
                 margin: 0;
                 outline: none;
                 overflow: visible;
-                padding: 1rem .75rem;
+                padding: 1.5rem 1rem;
                 text-align: center;
                 text-transform: uppercase;
                 touch-action: manipulation;
@@ -94,7 +94,7 @@
                 border: solid transparent;
                 border-radius: 16px;
                 border-width: 0 0 4px;
-                bottom: -4px;
+                bottom: -1px;
                 content: "";
                 left: 0;
                 position: absolute;
@@ -121,7 +121,7 @@
                 font-weight: bold;
                 letter-spacing: .2rem;
                 color: rgba(0, 0, 0, 0.799);
-
+ 
                 padding-top: 2.5rem;
                 padding-bottom: 2.5rem;
             }
