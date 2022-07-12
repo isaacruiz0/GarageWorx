@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router';
 
 import homeImage from './homeImage.png'
@@ -10,20 +10,22 @@ import './Home.scss'
 
 
 const Home = () => {
+  const [isVisible, setVisible] = useState(true);
+    // This keeps track of an element
+    const fadeInRef = useRef();
   let navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
 
-  // const [isVisible, setVisible] = React.useState(true);
-  // const domRef = React.useRef();
-  // React.useEffect(() => {
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => setVisible(entry.isIntersecting));
-  //   });
-  //   observer.observe(domRef.current);
-  //   return () => observer.unobserve(domRef.current);
-  // }, []);
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          setVisible(entry.isIntersecting)
+          if (entry.isIntersecting) {observer.unobserve(entry.target)}
+        })
+      },{threshold: .1})
+    observer.observe(fadeInRef.current)
+  }, [])
   
   return (
     <div id='Home'>
@@ -32,7 +34,7 @@ const Home = () => {
           <h1>Get your FREE online quote in seconds!</h1>
           <button className='quoteButton' onClick={() => {navigate("/Quote")}}>FREE QUOTE</button>
         </section>
-        <section className='Home_main-epoxyPitch'>
+        <section className={`Home_main-epoxyPitch fade-in-section  ${isVisible ? 'is-visible': ''}`}  ref={fadeInRef}>
           <div className="tableSection">
             <div className='epoxyH1Div'><h1>Why <br className='break'/>Epoxy?</h1></div>
             <img className='comparisonTableImage' src={graphComparison} alt="comparison-chart"/>
