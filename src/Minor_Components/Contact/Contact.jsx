@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRef} from 'react'
+import { useRef, useEffect, useState } from 'react'
 // S C S S
 import './Contact.scss'
 // E M A I L    N P M    P A C K A G E
@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
+  // This is the emailjs section
   const form = useRef();
 
   const sendEmail = (e) =>{
@@ -23,10 +24,25 @@ const Contact = () => {
     
     e.target.reset();
   }
+  // This will fade in the contact form 
+  const [isVisible, setVisible] = useState(true);
+  // This keeps track of an element
+  const fadeInRef = useRef();
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          setVisible(entry.isIntersecting)
+          if (entry.isIntersecting) {observer.unobserve(entry.target)}
+        })
+      },{threshold: .25})
+    observer.observe(fadeInRef.current)
+  }, [])
 
 
   return (
-    <div id='Contact' className='container'>
+    <div id='Contact' className={`container fade-in-section  ${isVisible ? 'is-visible': ''}`}  ref={fadeInRef} >
       <div className="backgroundDiv">
       <div className='contactLinks'>
         <a href="tel:555-666-7777"><i class="fa fa-phone" aria-hidden="true"></i><span>909-927-7001</span></a>
