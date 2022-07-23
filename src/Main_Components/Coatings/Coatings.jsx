@@ -23,7 +23,7 @@ const Coatings = () => {
     setTimeout(() => {
       setOpacity(1)
       setBlur(0)
-    }, 200)
+    }, 100)
 
   }, [])
 
