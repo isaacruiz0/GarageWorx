@@ -11,6 +11,10 @@
         margin: 0;
         width: 70%;
         border-width: 1.5px;
+        transition: opacity 1s ease-in-out;
+        .coatingImage{
+            transition: filter .5s ease-in-out
+        }
         figcaption{
             position: absolute;
             bottom: 0;

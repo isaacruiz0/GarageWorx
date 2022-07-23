@@ -12,27 +12,38 @@ const Coatings = () => {
 
   const [clickedImage, setClickedImage] = useState('')
   const [display, setDisplay] = useState(false)
+  const [opacity, setOpacity] = useState(0)
+  const [blur, setBlur] = useState(10)
 
       
   const style = { color: "white", fontSize: "1.5em" }
   
-  const imageArray =coatings.map(eachImage => <figure><img className='coatingImage' src={eachImage[0]} alt={eachImage[1]} onClick={() => {
-    setClickedImage(eachImage[0])
-    setDisplay(true)
-  }}/> <figcaption><span>{eachImage[1]}<BiExpandAlt style={style}/></span></figcaption></figure> )
-
   useEffect(() => {
     window.scrollTo(0, 0)
+    setTimeout(() => {
+      setOpacity(1)
+      setBlur(0)
+    }, 200)
 
   }, [])
-  
+
 
 
   return (
     <div className='coatingsDiv'>
       <div className="imageContainer">
-        {imageArray}
-      </div>
+        {coatings.map(eachImage => <figure style={{opacity: opacity}}>
+          <img className='coatingImage' 
+          src={eachImage[0]} 
+          alt={eachImage[1]} 
+          key = {eachImage}
+          style  = {{filter: `blur(${blur}px)`}}
+          onClick={() => {
+            setClickedImage(eachImage[0])
+            setDisplay(true)
+          }}/> <figcaption><span>{eachImage[1]}<BiExpandAlt style={style}/></span></figcaption></figure> )}
+
+     </div>
       <div className="popupImages" style={display ? {display:'block'} : {display:'none'}}>
         <HiX onClick={() => {setDisplay(false)}}/>
         <img src={clickedImage} alt="zoomed in coating"/>
