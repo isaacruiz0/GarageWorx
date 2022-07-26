@@ -14,17 +14,16 @@ const Coatings = () => {
   const [display, setDisplay] = useState(false)
   const [opacity, setOpacity] = useState(0)
   const [blur, setBlur] = useState(10)
+  const [captionOpacity, setCaptionOpacity] = useState(0)
 
       
   const style = { color: "white", fontSize: "1.5em" }
   
   useEffect(() => {
     window.scrollTo(0, 0)
-    setTimeout(() => {
       setOpacity(1)
       setBlur(0)
-    }, 750)
-
+      setTimeout(()=>{setCaptionOpacity(1)}, 1000)
   }, [])
 
 
@@ -41,7 +40,7 @@ const Coatings = () => {
           onClick={() => {
             setClickedImage(eachImage[0])
             setDisplay(true)
-          }}/> <figcaption><span>{eachImage[1]}<BiExpandAlt style={style}/></span></figcaption></figure> )}
+          }}/> <figcaption style={{opacity: captionOpacity}}><span>{eachImage[1]}<BiExpandAlt style={style}/></span></figcaption></figure> )}
 
      </div>
       <div className="popupImages" style={display ? {display:'block'} : {display:'none'}}>
