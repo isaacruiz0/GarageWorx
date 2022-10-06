@@ -51,13 +51,13 @@ const Contact = () => {
       <form onSubmit={sendEmail} ref={form}>
         
         <label>Name</label>
-        <input type="text" name='user_name' className=''/>
+        <input type="text" name='user_name' className='form-control' required/>
 
         <label>Email</label>
-        <input type="email" name='user_email' className='form-control'/>
+        <input type="email" name='user_email' className='form-control' required/>
 
         <label>Message</label>
-        <textarea name='message' rows='5' className='form-control' />
+        <textarea name='message' rows='5' className='form-control' required/>
         <input type='submit' value='Send' className='form-control btn'id='contact'/>
 
       </form>
